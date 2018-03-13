@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div  th:include="~{resources::resources}"></div>
+<div class="am-cf am-padding">
+  <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>添加用户</small></div>
+</div>
+<hr>
+<div class="am-g">
+  <div class="am-u-sm-12">
+    <form class="am-form am-form-horizontal" method="post" action="/departments">
+      <div class="am-form-group">
+        <label for="user-name" class="am-u-sm-3 am-form-label">部门名称</label>
+        <div class="am-u-sm-9">
+          <input type="text" id="user-name" placeholder="姓名 / Name" name="name">
+          <small>输入你的名字，让我们记住你。</small>
+        </div>
+      </div>
+
+      <div class="am-form-group">
+        <label for="user-email" class="am-u-sm-3 am-form-label">上级部门id</label>
+        <div class="am-u-sm-9">
+          <input type="text" id="user-email" placeholder="输入你的电子邮件 / Email" name="parentid">
+          <small>邮箱你懂得...</small>
+        </div>
+      </div>
+
+      <div class="am-form-group">
+        <label for="user-phone" class="am-u-sm-3 am-form-label">排序</label>
+        <div class="am-u-sm-9">
+          <input type="text" id="user-phone" placeholder="输入你的电话号码 / Telephone" name="order">
+        </div>
+      </div>
+      <div class="am-form-group">
+        <div class="am-u-sm-9 am-u-sm-push-3">
+          <button type="submit" class="am-btn am-btn-primary">保存</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</html>

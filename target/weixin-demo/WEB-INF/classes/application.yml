@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/weixin
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: create
+      show-sql: true
+  mvc:
+    view:
+      prefix: /pages/
+      suffix: .html
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+    cache: false
+server:
+  tomcat:
+    accesslog:
+      enabled: true
+    protocol-header: x-forwarded-proto
+    remote-ip-header: x-forwarded-for
+  port: 8000
+  address: 127.0.0.1
+  servlet:
+    session:
+      timeout: 30
+    context-path: /

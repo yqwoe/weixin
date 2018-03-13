@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Auth Back 当前登录人:</h1>
+<div th:object="${session.user}">
+    <p>userId: <span th:text="*{UserId}">Sebastian</span>.</p>
+    <p>设备id: <span th:text="*{DeviceId}">Pepper</span>.</p>
+    <p>用户获取用户信息: <span th:text="*{user_ticket}">Pepper</span>.</p>
+    <p>失效时间: <span th:text="*{expires_in}">Pepper</span>.</p>
+</div>
+<hr>
+<h2>基本信息:</h2>
+<div th:object="${session.userinfo}">
+    <p>userId: <span th:text="*{userid}">Sebastian</span>.</p>
+    <p>姓名: <span th:text="*{name}">Pepper</span>.</p>
+    <p>部门: <span th:text="*{department}">Pepper</span>.</p>
+    <p>职位: <span th:text="*{position}">Pepper</span>.</p>
+    <p>头像: <img th:attr="src=*{avatar}"></img>.</p>
+</div>
+
+</body>
+</html>
